@@ -18,7 +18,7 @@ Library.__index = Library;
 function Library:NewLine(info)
 	local l = Drawing.new("Line")
 	l.Visible = info.Visible or true;
-	l.Color = info.Color or Color3.fromRGB(255,0,166);
+	l.Color = info.Color or Color2.fromRGB(255,0,166);
 	l.Transparency = info.Transparency or 1;
 	l.Thickness = info.Thickness or 1;
 	return l
@@ -34,7 +34,7 @@ local Skeleton = {
 	Player = nil;
 	Visible = false;
 	Lines = {};
-	Color = Color3.fromRGB(255,0,166);
+	Color = Color2.fromRGB(255,0,166);
 	Alpha = 1;
 	Thickness = 1;
 	DoSubsteps = true;
@@ -298,7 +298,7 @@ if false then
 
 	while true do
 		for _, skeleton in next, Skeletons do
-			skeleton:SetColor(Color3.fromRGB(skeleton.Player.TeamColor == LocalPlayer.TeamColor and Color3.fromRGB(255, 0, 166) or Color3.fromRGB(255, 0, 166)));
+			skeleton:SetColor(Color2.fromRGB(skeleton.Player.TeamColor == LocalPlayer.TeamColor and Color2.fromRGB(255, 0, 166) or Color2.fromRGB(255, 0, 166)));
 			skeleton:SetThickness(4);
 		end
 
